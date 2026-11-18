@@ -1,0 +1,15 @@
+# ShortSpec
+
+> Sourced product facts by barcode. Each fact names its source, licence and check date. Free API and MCP, no key. No prices, stock or reviews. Pages link to a store search as a paid link.
+
+Status: served at https://api.shortspec.com.
+
+## Products
+- [All products](https://shortspec.com/): one page per product barcode, with sourced facts and photo credit.
+
+## Machine access
+- API: GET https://api.shortspec.com/v1/barcode/{code}, GET https://api.shortspec.com/v1/catalog. Free, no key.
+- MCP: Streamable HTTP at https://api.shortspec.com/mcp, tool barcode_facts (read-only). Free, no key.
+
+## How to cite
+Cite the product page URL and the fact's own source link and check date. Wikipedia text is CC BY-SA 4.0 ("Wikipedia contributors", with revision); Wikidata is CC0; Open Products Facts barcodes are ODbL ("Open Products Facts contributors"); each photo carries its own author and licence on the page.
