@@ -1,0 +1,13 @@
+{
+  "openapi": "3.1.0",
+  "info": {"title": "ShortSpec barcode facts", "version": "0.1.0", "description": "Free, no key. Sourced product facts by barcode; each fact carries its source, licence and check date. Most barcodes return no_facts, which is not a safety statement. No prices, stock or reviews.", "license": {"name": "Per fact; see README Data licence"}},
+  "servers": [{"url": "https://api.shortspec.com"}],
+  "paths": {
+    "/v1/barcode/{code}": {"get": {"summary": "Facts for one barcode", "operationId": "getBarcodeFacts",
+      "parameters": [{"name": "code", "in": "path", "required": true, "description": "8, 12, 13 or 14 digits with a valid check digit", "schema": {"type": "string", "pattern": "^[0-9]{8}$|^[0-9]{12,14}$"}, "example": "8596202003892"}],
+      "responses": {"200": {"description": "Facts held", "content": {"application/json": {"schema": {"type": "object"}}}},
+        "400": {"description": "Invalid barcode"}, "404": {"description": "No facts held (state no_facts)"}, "429": {"description": "Rate limited"}, "503": {"description": "Facts unavailable"}}}},
+    "/v1/catalog": {"get": {"summary": "Datasets, publishers and licences", "operationId": "getCatalog",
+      "responses": {"200": {"description": "Catalogue", "content": {"application/json": {"schema": {"type": "object"}}}}, "503": {"description": "Unavailable"}}}}
+  }
+}
