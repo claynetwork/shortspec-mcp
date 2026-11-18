@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.shortspec/product-facts",
+  "title": "ShortSpec barcode facts",
+  "description": "Sourced facts by barcode, with source, licence and check date. Free, no key. Most codes: no facts.",
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.shortspec.com/mcp"
+    }
+  ],
+  "websiteUrl": "https://shortspec.com/"
+}
